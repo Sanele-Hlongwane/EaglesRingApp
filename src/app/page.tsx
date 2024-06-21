@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from '../styles/App.module.css';
+import PitchForm from '@/pages/PitchForm';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <p className={styles.description}>
           An investment platform that connects aspiring entrepreneurs with experienced investors.
         </p>
+
 
         <div className={styles.grid}>
           <a href="../pages/users" className={styles.card}>

@@ -8,7 +8,7 @@ const UsersPage = () => {
     // Fetch users data from your API route
     const fetchUsers = async () => {
       try {
-        const res = await fetch('/api/get-users');
+        const res = await fetch('@/api/webhooks/clerk/route');
         if (!res.ok) {
           throw new Error('Failed to fetch users');
         }

@@ -1,12 +1,11 @@
-
+// app/layout.tsx or your layout file
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs'
-import './globals.css'
+  ClerkProvider
+} from '@clerk/nextjs';
+import './globals.css';
+import NavBar from '@/components/NavBar';
+import Footer from '@/components/Footer';
+
 export default function RootLayout({
   children,
 }: {
@@ -16,15 +15,11 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
+          <NavBar />
           {children}
+          <Footer />
         </body>
       </html>
     </ClerkProvider>
-  )
+  );
 }

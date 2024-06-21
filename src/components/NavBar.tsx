@@ -1,7 +1,7 @@
 "use client"
 // components/NavBar.tsx
 import { useState } from 'react';
-import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut, UserButton, SignInButton, SignUpButton } from '@clerk/clerk-react';
 import Link from 'next/link';
 import styles from './NavBar.module.css';
 
@@ -44,19 +44,26 @@ const NavBar = () => {
           </li>
           <SignedIn>
             <li className={styles.navItem}>
-              <UserButton />
+              <Link href="/dashboard" className={styles.navLinks}>
+                Dashboard
+              </Link>
+            </li>
+            <li className={styles.navItem}>
+              <div className={styles.userButtonWrapper}>
+                <UserButton />
+              </div>
             </li>
           </SignedIn>
           <SignedOut>
             <li className={styles.navItem}>
-              <Link href="/sign-in" className={styles.navLinks}>
-                Sign In
-              </Link>
+              <div className={styles.userButtonWrapper}>
+                <SignInButton />
+              </div>
             </li>
             <li className={styles.navItem}>
-              <Link href="/sign-up" className={styles.navLinks}>
-                Sign Up
-              </Link>
+              <div className={styles.userButtonWrapper}>
+                <SignUpButton />
+              </div>
             </li>
           </SignedOut>
         </ul>

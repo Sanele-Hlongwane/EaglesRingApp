@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { services } from '@/pages/data/servicesData';
+import { services } from '@/data/servicesData';
 import styles from '@/styles/Services.module.css';
 
 const ServicesPage = () => {

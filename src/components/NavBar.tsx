@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { SignedIn, SignedOut, UserButton, SignInButton, SignUpButton } from '@clerk/clerk-react';
 import Link from 'next/link';
-import styles from './NavBar.module.css';
+import styles from './styles/NavBar.module.css';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);

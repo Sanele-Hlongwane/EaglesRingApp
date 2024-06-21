@@ -1,32 +1,34 @@
-// components/Footer.tsx
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import styles from './Footer.module.css';
+// src/components/Footer.tsx
+
+import React from 'react';
+import Link from 'next/link';
+import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/nextjs';
+import styles from './styles/Footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.container}>
-        <div className={styles.footerLinks}>
-          <a href="/" className={styles.link}>Home</a>
-          <a href="/about" className={styles.link}>About</a>
-          <a href="/services" className={styles.link}>Services</a>
-          <a href="/contact" className={styles.link}>Contact</a>
-        </div>
-        <div className={styles.socialIcons}>
-          <a href="https://facebook.com" className={styles.icon}>
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a href="https://twitter.com" className={styles.icon}>
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a href="https://instagram.com" className={styles.icon}>
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="https://linkedin.com" className={styles.icon}>
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-        </div>
+      <div className={styles.footerLeft}>
+        <p>&copy; {new Date().getFullYear()} Eagles Ring. All rights reserved.</p>
+      </div>
+      <div className={styles.footerRight}>
+        <Link href="/profile" className={styles.footerLink}>
+          Profile
+        </Link>
+        <Link href="/contact" className={styles.footerLink}>
+          Contact Us
+        </Link>
+        <Link href="/about" className={styles.footerLink}>
+          About Us
+        </Link>
+        <SignedOut>
+          <SignInButton mode="modal">
+            <button className={styles.footerButton}>Sign In</button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </footer>
   );

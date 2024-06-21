@@ -28,23 +28,23 @@ const NavBar = () => {
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/about" className={styles.navLinks}>
+            <Link href="/About" className={styles.navLinks}>
               About
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/services" className={styles.navLinks}>
+            <Link href="/Services" className={styles.navLinks}>
               Services
             </Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/contact" className={styles.navLinks}>
+            <Link href="/Contact" className={styles.navLinks}>
               Contact
             </Link>
           </li>
           <SignedIn>
             <li className={styles.navItem}>
-              <Link href="/dashboard" className={styles.navLinks}>
+              <Link href="/Profile" className={styles.navLinks}>
                 Dashboard
               </Link>
             </li>

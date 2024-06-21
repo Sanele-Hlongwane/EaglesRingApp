@@ -1,22 +1,14 @@
-// src/pages/about.tsx
+// pages/about.tsx
 
 import React from 'react';
-import NavBar from '@/components/NavBar';
+import styles from '@/styles/About.module.css';
 
 const AboutPage = () => {
   return (
-    <div>
-      <NavBar />
-      <div className="content-container">
-        <h1>About Us</h1>
-        <p>
-          Eagles Ring is an investment platform that matches aspiring entrepreneurs with investment opportunities.
-        </p>
-        <p>
-          Our mission is to empower entrepreneurs worldwide by connecting them with experienced investors who can help bring their business ideas to life.
-        </p>
-      </div>
-    </div>
+        <div className={styles.about}>
+          <h1>About Us</h1>
+          <p>We are Eagles Ring, connecting entrepreneurs with investors.</p>
+        </div>
   );
 };
 

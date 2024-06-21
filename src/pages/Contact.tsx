@@ -1,13 +1,11 @@
 // src/pages/contact.tsx
 
 import React from 'react';
-import NavBar from '@/components/NavBar';
+import Layout from '@/app/layout';
 import styles from '../styles/Contact.module.css';
 
 const ContactPage = () => {
   return (
-    <div>
-      <NavBar />
       <div className={styles.contactContainer}>
         <h1>Contact Us</h1>
         <p>
@@ -25,7 +23,6 @@ const ContactPage = () => {
           </li>
         </ul>
       </div>
-    </div>
   );
 };
 

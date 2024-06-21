@@ -12,14 +12,19 @@ const Footer = () => {
         <p>&copy; {new Date().getFullYear()} Eagles Ring. All rights reserved.</p>
       </div>
       <div className={styles.footerRight}>
-        <Link href="/profile" className={styles.footerLink}>
-          Profile
-        </Link>
-        <Link href="/contact" className={styles.footerLink}>
+        <SignedIn>
+          <Link href="/Profile" className={styles.footerLink}>
+            Profile
+          </Link>
+        </SignedIn>
+        <Link href="/Contact" className={styles.footerLink}>
           Contact Us
         </Link>
-        <Link href="/about" className={styles.footerLink}>
+        <Link href="/About" className={styles.footerLink}>
           About Us
+        </Link>
+        <Link href="/Services" className={styles.footerLink}>
+            Services
         </Link>
         <SignedOut>
           <SignInButton mode="modal">
